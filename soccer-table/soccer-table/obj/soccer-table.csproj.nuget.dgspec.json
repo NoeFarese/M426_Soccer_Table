@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\louis\\Source\\Repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj": {}
+    "C:\\Users\\louis\\source\\repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj": {}
   },
   "projects": {
-    "C:\\Users\\louis\\Source\\Repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj": {
+    "C:\\Users\\louis\\source\\repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\louis\\Source\\Repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj",
+        "projectUniqueName": "C:\\Users\\louis\\source\\repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj",
         "projectName": "soccer-table",
-        "projectPath": "C:\\Users\\louis\\Source\\Repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj",
+        "projectPath": "C:\\Users\\louis\\source\\repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\soccer-table.csproj",
         "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\louis\\Source\\Repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\obj\\",
+        "outputPath": "C:\\Users\\louis\\source\\repos\\M426_Soccer_Table\\soccer-table\\soccer-table\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",

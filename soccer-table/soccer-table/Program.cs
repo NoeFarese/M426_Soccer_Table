@@ -111,6 +111,7 @@
                 Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}",
                     rank++, team.Name, team.Points, team.Wins, team.Losses, team.Draws, team.GoalsFor, team.GoalsAgainst);
             }
+        Console.ReadKey();
         }
 
         static void DisplayLog(List<string> log)

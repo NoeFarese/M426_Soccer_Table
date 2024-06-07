@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("soccer-table")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51fcf8edad2d6ad67ef3c3113ee5fe172e609650")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ae603e33df591f9e9ecc337c965048750f47972")]
 [assembly: System.Reflection.AssemblyProductAttribute("soccer-table")]
 [assembly: System.Reflection.AssemblyTitleAttribute("soccer-table")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

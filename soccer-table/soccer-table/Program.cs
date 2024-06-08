@@ -1,8 +1,8 @@
 ﻿namespace soccer_table;
 
- class Program
+ public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             List<string> log = [];
             log.Add("Bitte geben Sie den Pfad zum Ordner der Liga ein:");
@@ -45,7 +45,7 @@
             DisplayLeagueTable(leagueTable);
         }
 
-        static List<Team> GenerateLeagueTable(string leagueFolder, int? targetDay)
+        public static List<Team> GenerateLeagueTable(string leagueFolder, int? targetDay)
         {
             List<Team> teams = new List<Team>();
             string[] dayFiles = Directory.GetFiles(leagueFolder, "day*.txt");
@@ -78,7 +78,7 @@
                         .ToList();
         }
 
-        static void UpdateTeamStats(List<Team> teams, string teamName, int goalsFor, int goalsAgainst)
+        public static void UpdateTeamStats(List<Team> teams, string teamName, int goalsFor, int goalsAgainst)
         {
             Team? team = teams.FirstOrDefault(t => t.Name == teamName);
             if (team == null)
@@ -100,7 +100,7 @@
             team.Points = team.Wins * 3 + team.Draws;
         }
 
-        static void DisplayLeagueTable(List<Team> teams)
+        public static void DisplayLeagueTable(List<Team> teams)
         {
             Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}",
                 "Rang", "Name", "Punkte", "S", "N", "U", "T+", "T-");
@@ -114,7 +114,7 @@
         Console.ReadKey();
         }
 
-        static void DisplayLog(List<string> log)
+        public static void DisplayLog(List<string> log)
         {
             Console.Clear();
             for (int i = 0; i < log.Count; i++) {

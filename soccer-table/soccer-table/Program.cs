@@ -112,13 +112,13 @@ public class Program
 
     public static void DisplayLeagueTable(List<Team> teams)
     {
-        Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}{8,-5}",
+        Console.WriteLine("{0,4}  {1,-20}{2,7} {3,4} {4,4} {5,4} {6,4} {7,4} {8,4}",
             "Rang", "Name", "Punkte", "S", "N", "U", "T+", "T-", "TD");
 
         int rank = 1;
         foreach (var team in teams)
         {
-            Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}{8,-5}",
+            Console.WriteLine("{0,4}  {1,-20}{2,7} {3,4} {4,4} {5,4} {6,4} {7,4} {8,4}",
                 rank++, team.Name, team.Points, team.Wins, team.Losses, team.Draws, team.GoalsFor, team.GoalsAgainst,
                 team.GoalDifference);
         }

@@ -27,6 +27,15 @@ Wenn Sie den Spieltag leer lassen, wird das Resultat vom Ende der Saison angezei
 Um alle Tests auszuführen können sie neben public class ProgramTest auf den grünen Button klicken.
 Um Tests einzeln auszuführen können sie den grünen Button neben dem jeweiligen Test anklicken.
 
+## Legende
+
+S = Anzahl Siege
+N = Anzahl Niederlagen
+U = Anzahl Unentschieden
+T+ = Anzahl erzielte Tore
+T- = Anzahl Gegentore
+TD = Tordifferenz (Anzahl erzielte Tore - Anzahl Gegentore)
+
 ## Credits
 
 Viel Spass mit unserem Projekt.

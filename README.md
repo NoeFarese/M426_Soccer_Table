@@ -8,7 +8,7 @@ Dieses Projekt erstellt eine Tabelle aus den Daten eines gewählten Spieltages, 
 
 Laden Sie das ZIP-File herunter und entpacken Sie es oder kopieren Sie es mit git auf Ihren Computer.
 
-Um das Projekt auszuführen müssen Sie .net von dotnet.microsoft.com installieren.
+Um das Projekt auszuführen müssen Sie [.NET 8.0](dotnet.microsoft.com) installieren.
 
 ## Projekt starten
 

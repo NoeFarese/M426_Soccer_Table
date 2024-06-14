@@ -32,12 +32,12 @@ Dies ist bei dem String testDirectory.
 
 ## Legende
 
-S = Anzahl Siege
-N = Anzahl Niederlagen
-U = Anzahl Unentschieden
-T+ = Anzahl erzielte Tore
-T- = Anzahl Gegentore
-TD = Tordifferenz (Anzahl erzielte Tore - Anzahl Gegentore)
+- S = Anzahl Siege
+- N = Anzahl Niederlagen
+- U = Anzahl Unentschieden
+- T+ = Anzahl erzielte Tore
+- T- = Anzahl Gegentore
+- TD = Tordifferenz (Anzahl erzielte Tore - Anzahl Gegentore)
 
 ## Credits
 

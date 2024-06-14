@@ -4,10 +4,16 @@
 
 Dieses Projekt erstellt eine Tabelle aus den Daten eines gewählten Spieltages, der gewählten Liga.
 
+## Projekt und Abhängigkeiten installieren
+
+Laden Sie das ZIP-File herunter und entpacken Sie es oder kopieren Sie es mit git auf Ihren Computer.
+
+Um das Projekt auszuführen müssen Sie .net von dotnet.microsoft.com installieren.
+
 ## Projekt starten
 
-Öffnen sie die .sln Datei mit einer IDE, mit welcher man c# kompilieren und ausführen kann.
-Starten das geöffnete Projekt mit ihrer IDE.
+Öffnen Sie die .sln Datei mit einer IDE, mit welcher man c# kompilieren und ausführen kann.
+Startens sie das geöffnete Projekt mit ihrer IDE.
 
 ## Credits
 

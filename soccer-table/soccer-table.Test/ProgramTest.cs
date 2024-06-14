@@ -96,4 +96,82 @@ public class ProgramTest
         Assert.Equal("Team C", teams[2].Name);
         Assert.Equal("Team D", teams[3].Name);
     }
+    
+     [Fact]
+    public void GenerateLeagueTable_SortsTeamsWithSamePoints()
+    {
+        // Arrange
+        var teams = new List<Team>
+        {
+            new Team { Name = "Team A", Points = 6, Wins = 2, Draws = 0, Losses = 0, GoalsFor = 5, GoalsAgainst = 2 },
+            new Team { Name = "Team B", Points = 6, Wins = 1, Draws = 3, Losses = 0, GoalsFor = 4, GoalsAgainst = 3 },
+            new Team { Name = "Team C", Points = 4, Wins = 1, Draws = 1, Losses = 1, GoalsFor = 3, GoalsAgainst = 2 },
+            new Team { Name = "Team D", Points = 2, Wins = 0, Draws = 2, Losses = 1, GoalsFor = 1, GoalsAgainst = 2 }
+        };
+
+        // Act
+        teams = teams.OrderByDescending(t => t.Points)
+            .ThenByDescending(t => t.GoalDifference)
+            .ThenByDescending(t => t.Wins)
+            .ThenBy(t => t.Name)
+            .ToList();
+
+        // Assert
+        Assert.Equal("Team A", teams[0].Name);
+        Assert.Equal("Team B", teams[1].Name);
+        Assert.Equal("Team C", teams[2].Name);
+        Assert.Equal("Team D", teams[3].Name);
+    }
+
+    [Fact]
+    public void GenerateLeagueTable_SortsTeamsWithSamePointsAndGoalDifference()
+    {
+        // Arrange
+        var teams = new List<Team>
+        {
+            new Team { Name = "Team A", Points = 6, Wins = 1, Draws = 3, Losses = 0, GoalsFor = 5, GoalsAgainst = 2 },
+            new Team { Name = "Team B", Points = 6, Wins = 2, Draws = 0, Losses = 0, GoalsFor = 4, GoalsAgainst = 1 },
+            new Team { Name = "Team C", Points = 4, Wins = 1, Draws = 1, Losses = 1, GoalsFor = 3, GoalsAgainst = 2 },
+            new Team { Name = "Team D", Points = 2, Wins = 0, Draws = 2, Losses = 1, GoalsFor = 1, GoalsAgainst = 2 }
+        };
+
+        // Act
+        teams = teams.OrderByDescending(t => t.Points)
+            .ThenByDescending(t => t.GoalDifference)
+            .ThenByDescending(t => t.Wins)
+            .ThenBy(t => t.Name)
+            .ToList();
+
+        // Assert
+        Assert.Equal("Team B", teams[0].Name);
+        Assert.Equal("Team A", teams[1].Name);
+        Assert.Equal("Team C", teams[2].Name);
+        Assert.Equal("Team D", teams[3].Name);
+    }
+
+    [Fact]
+    public void GenerateLeagueTable_SortsTeamsWithSamePointsGoalDifferenceAndWins()
+    {
+        // Arrange
+        var teams = new List<Team>
+        {
+            new Team { Name = "Team A", Points = 6, Wins = 2, Draws = 0, Losses = 0, GoalsFor = 5, GoalsAgainst = 2 },
+            new Team { Name = "Team B", Points = 6, Wins = 2, Draws = 0, Losses = 0, GoalsFor = 5, GoalsAgainst = 2 },
+            new Team { Name = "Team C", Points = 4, Wins = 1, Draws = 1, Losses = 1, GoalsFor = 3, GoalsAgainst = 2 },
+            new Team { Name = "Team D", Points = 2, Wins = 0, Draws = 2, Losses = 1, GoalsFor = 1, GoalsAgainst = 2 }
+        };
+
+        // Act
+        teams = teams.OrderByDescending(t => t.Points)
+            .ThenByDescending(t => t.GoalDifference)
+            .ThenByDescending(t => t.Wins)
+            .ThenBy(t => t.Name)
+            .ToList();
+
+        // Assert
+        Assert.Equal("Team A", teams[0].Name);
+        Assert.Equal("Team B", teams[1].Name);
+        Assert.Equal("Team C", teams[2].Name);
+        Assert.Equal("Team D", teams[3].Name);
+    }
 }

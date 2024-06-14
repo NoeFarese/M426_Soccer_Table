@@ -102,14 +102,14 @@
 
         public static void DisplayLeagueTable(List<Team> teams)
         {
-            Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}",
-                "Rang", "Name", "Punkte", "S", "N", "U", "T+", "T-");
+            Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}{8,-5}",
+                "Rang", "Name", "Punkte", "S", "N", "U", "T+", "T-", "TD");
 
             int rank = 1;
             foreach (var team in teams)
             {
-                Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}",
-                    rank++, team.Name, team.Points, team.Wins, team.Losses, team.Draws, team.GoalsFor, team.GoalsAgainst);
+                Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}{8,-5}",
+                    rank++, team.Name, team.Points, team.Wins, team.Losses, team.Draws, team.GoalsFor, team.GoalsAgainst, team.GoalDifference);
             }
         Console.ReadKey();
         }

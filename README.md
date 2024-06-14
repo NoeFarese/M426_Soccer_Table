@@ -13,7 +13,7 @@ Um das Projekt auszuführen müssen Sie .net von dotnet.microsoft.com installier
 ## Projekt starten
 
 Öffnen Sie die .sln Datei mit einer IDE, mit welcher man c# kompilieren und ausführen kann.
-Startens sie das geöffnete Projekt mit ihrer IDE.
+Starten Sie das geöffnete Projekt in Ihrer IDE.
 
 ## Credits
 

@@ -15,6 +15,12 @@ Um das Projekt auszuführen müssen Sie .net von dotnet.microsoft.com installier
 Öffnen Sie die .sln Datei mit einer IDE, mit welcher man c# kompilieren und ausführen kann.
 Starten Sie das geöffnete Projekt in Ihrer IDE.
 
+## Projekt Anwenden
+
+Geben Sie den absoluten Pfad zum Ordner einer Fussballliga an.
+Falls der Ordner gefunden worden ist, können sie den gewünschten Spieltag wählen.
+Wenn Sie den Spieltag leer lassen, wird das Resultat vom Ende der Saison angezeigt.
+
 ## Credits
 
 Viel Spass mit unserem Projekt.

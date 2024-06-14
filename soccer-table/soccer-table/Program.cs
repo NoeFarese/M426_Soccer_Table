@@ -1,41 +1,66 @@
-﻿namespace soccer_table;
-
- public class Program
+﻿namespace soccer_table
+{
+    public class Program
     {
         public static void Main(string[] args)
         {
-            List<string> log = [];
+            List<string> log = new List<string>();
             log.Add("Bitte geben Sie den Pfad zum Ordner der Liga ein:");
             Console.WriteLine(log[0]);
             string? leagueFolder = "";
-            while (string.IsNullOrEmpty(leagueFolder)) {
+            while (true)
+            {
                 leagueFolder = Console.ReadLine();
-                if (string.IsNullOrEmpty(leagueFolder)) {
+                if (string.IsNullOrEmpty(leagueFolder))
+                {
                     log[0] = "Input war null oder leer. Bitte geben Sie einen gültigen Pfad ein.";
                     DisplayLog(log);
+                    log.Add("Bitte geben Sie den Pfad zum Ordner der Liga ein:");
+                    continue;
                 }
-                if (!Directory.Exists(leagueFolder)) {
+
+                if (!Directory.Exists(leagueFolder))
+                {
                     log[0] = "Der Order konnte nicht gefunden werden. Bitte geben Sie einen existierenden Order ein.";
                     DisplayLog(log);
-                    leagueFolder = "";
+                    log.Add("Bitte geben Sie den Pfad zum Ordner der Liga ein:");
+                    continue;
                 }
+
+                string[] dayFiles = Directory.GetFiles(leagueFolder, "day*.txt");
+                if (dayFiles.Length == 0)
+                {
+                    log[0] =
+                        "Im angegebenen Ordner wurden keine passenden Dateien gefunden. Bitte geben Sie einen gültigen Pfad ein.";
+                    DisplayLog(log);
+                    log.Add("Bitte geben Sie den Pfad zum Ordner der Liga ein:");
+                    continue;
+                }
+
+                break;
             }
+
             log.Add(leagueFolder);
 
             log.Add("Geben Sie den gewünschten Spieltag ein (optional, Leer lassen für alle):");
             DisplayLog(log);
             string? inputDay = Console.ReadLine();
             int? targetDay = (int?)null;
-            if (!string.IsNullOrEmpty(inputDay)) {
-                if (int.TryParse(inputDay, out int tempDay)) {
+            if (!string.IsNullOrEmpty(inputDay))
+            {
+                if (int.TryParse(inputDay, out int tempDay))
+                {
                     targetDay = tempDay;
                 }
-                else {
-                    while (!int.TryParse(inputDay, out int tempDay2)) {
+                else
+                {
+                    while (!int.TryParse(inputDay, out int tempDay2))
+                    {
                         log[2] = "Ungültige Eingabe. Bitte geben Sie eine Zahl eine oder lassen Sie die Eingabe leer";
                         DisplayLog(log);
                         inputDay = Console.ReadLine();
                     }
+
                     targetDay = int.Parse(inputDay);
                 }
             }
@@ -72,10 +97,10 @@
 
             // Sort by points, goal difference, wins, and name
             return teams.OrderByDescending(t => t.Points)
-                        .ThenByDescending(t => t.GoalDifference)
-                        .ThenByDescending(t => t.Wins)
-                        .ThenBy(t => t.Name)
-                        .ToList();
+                .ThenByDescending(t => t.GoalDifference)
+                .ThenByDescending(t => t.Wins)
+                .ThenBy(t => t.Name)
+                .ToList();
         }
 
         public static void UpdateTeamStats(List<Team> teams, string teamName, int goalsFor, int goalsAgainst)
@@ -109,16 +134,20 @@
             foreach (var team in teams)
             {
                 Console.WriteLine("{0,-6}{1,-20}{2,-8}{3,-5}{4,-5}{5,-5}{6,-5}{7,-5}{8,-5}",
-                    rank++, team.Name, team.Points, team.Wins, team.Losses, team.Draws, team.GoalsFor, team.GoalsAgainst, team.GoalDifference);
+                    rank++, team.Name, team.Points, team.Wins, team.Losses, team.Draws, team.GoalsFor,
+                    team.GoalsAgainst, team.GoalDifference);
             }
-        Console.ReadKey();
+
+            Console.ReadKey();
         }
 
         public static void DisplayLog(List<string> log)
         {
             Console.Clear();
-            for (int i = 0; i < log.Count; i++) {
+            for (int i = 0; i < log.Count; i++)
+            {
                 Console.WriteLine(log[i]);
             }
         }
     }
+}

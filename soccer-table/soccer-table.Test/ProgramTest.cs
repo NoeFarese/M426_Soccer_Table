@@ -174,4 +174,19 @@ public class ProgramTest
         Assert.Equal("Team C", teams[2].Name);
         Assert.Equal("Team D", teams[3].Name);
     }
+    
+    [Fact]
+    public void GenerateLeagueTable_FiltersByTargetDay()
+    {
+        // Arrange
+        string testDirectory = "EIGENER-PFAD/M426_Soccer_Table/soccer-table/soccer-results/bundesliga";
+        int targetDay = 1;
+
+        // Act
+        List<Team> result = Program.GenerateLeagueTable(testDirectory, targetDay);
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.DoesNotContain(result, team => team.Name == "TeamB" && team.Draws == 1);
+    }
 }

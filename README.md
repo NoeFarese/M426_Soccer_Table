@@ -27,6 +27,9 @@ Wenn Sie den Spieltag leer lassen, wird das Resultat vom Ende der Saison angezei
 Um alle Tests auszuführen können sie neben public class ProgramTest auf den grünen Button klicken.
 Um Tests einzeln auszuführen können sie den grünen Button neben dem jeweiligen Test anklicken.
 
+Beim Test namens "GenerateLeagueTable_FiltersByTargetDay" müssen Sie noch den Pfad anpassen, dort wo EIGENER-PFAD steht, müssen Sie ihren eigenen Pfad noch ergänzen.
+Dies ist bei dem String testDirectory.
+
 ## Legende
 
 S = Anzahl Siege

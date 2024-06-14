@@ -7,7 +7,7 @@ Dieses Projekt erstellt eine Tabelle aus den Daten eines gewählten Spieltages, 
 ## Projekt starten
 
 Öffnen sie die .sln Datei mit einer IDE, mit welcher man c# kompilieren und ausführen kann.
-Starten sie das geöffnete Projekt mit ihrer IDE.
+Starten Sie das geöffnete Projekt mit ihrer IDE.
 
 ## Credits
 
